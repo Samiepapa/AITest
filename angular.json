@@ -89,5 +89,8 @@
       }
     }
   },
-  "defaultProject": "myApp"
+  "defaultProject": "myApp",
+  "cli": {
+    "analytics": false
+  }
 }
