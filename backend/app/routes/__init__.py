@@ -8,6 +8,6 @@ from . import api_status
 __all__ = ["blueprints"]
 
 blueprints = [
-    api_iamge.bp,
+    api_image.bp,
     api_status.bp
 ]

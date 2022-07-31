@@ -147,7 +147,7 @@ class U2Net_portrait():
 
     def run(self, filepath):
         # Load the cascade face detection model
-        face_cascade = cv2.CascadeClassifier(os.path.join(self._path_model, 'u2net_portrait/haarcascade_frontalface_default.xml')
+        face_cascade = cv2.CascadeClassifier(os.path.join(self._path_model, 'u2net_portrait/haarcascade_frontalface_default.xml'))
         # u2net_portrait path
         model_dir = os.path.join(self._path_model, 'u2net_portrait/u2net_portrait.pth')
 
