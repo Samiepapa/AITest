@@ -4,8 +4,10 @@
 
 ### Backend
 
-pip install -r requirement.txt
-python backend/server.py
+```
+$ pip install -r requirement.txt
+$ python backend/server.py
+```
 
 ### Frontend
 
