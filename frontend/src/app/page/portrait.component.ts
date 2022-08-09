@@ -67,7 +67,7 @@ export class PortraitComponent implements OnInit {
   }
 
   public onSubmit() {
-    var api_url = 'https://39.117.105.224:7777/api/v1/file'
+    var api_url = 'http://39.117.105.224:7777/api/v1/file'
     var formData = new FormData();
     formData.append("attached", $(`#input_file`)[0].files[0]);
     $.ajax({
