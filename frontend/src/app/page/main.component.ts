@@ -13,7 +13,7 @@ import { SideMenuComponent } from '../component/side-menu.component';
 
       <div class="ui stackable three column padded grid">
         <div class="three wide column olive">
-          <appSizeMenu></appSizeMenu>
+          <appSideMenu></appSideMenu>
         </div>
         <div class="ten wide column black">
           <img src="assets/images/dance.gif" class="ui centered image">
