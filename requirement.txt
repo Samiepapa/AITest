@@ -1,0 +1,9 @@
+flask
+flask-cors
+colorlog
+Pyfiglet
+tinydb
+
+torch
+pillow
+opencv-python
