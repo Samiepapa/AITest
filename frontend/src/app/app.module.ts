@@ -32,7 +32,9 @@ import { Renderer } from './service/renderer';
 
     MainComponent,
     OnnxComponent,
-    RendererComponent
+    RendererComponent,
+    PortraitComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,
