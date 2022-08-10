@@ -7,6 +7,9 @@ from torch.autograd import Variable
 import numpy as np
 from glob import glob
 
+from utils.logger import *
+logger = CustomLogger.__call__().logger
+
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from libs.u2net import *
@@ -17,7 +20,7 @@ class U2Net_portrait():
         self._path_model = path_model
         self._path_output = path_output
 
-    def detect_single_face(face_cascade,img):
+    def detect_single_face(self, face_cascade, img):
         # Convert into grayscale
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -39,7 +42,7 @@ class U2Net_portrait():
         return faces[idx]
 
     # crop, pad and resize face region to 512x512 resolution
-    def crop_face(img, face):
+    def crop_face(self, img, face):
 
         # no face detected, return the whole image and the inference will run on the whole image
         if(face is None):
@@ -99,7 +102,7 @@ class U2Net_portrait():
 
         return im_face
 
-    def normPRED(d):
+    def normPRED(self, d):
         ma = torch.max(d)
         mi = torch.min(d)
 
@@ -107,7 +110,7 @@ class U2Net_portrait():
 
         return dn
 
-    def inference(net,input):
+    def inference(self, net,input):
 
         # normalize the input
         tmpImg = np.zeros((input.shape[0],input.shape[1],3))
@@ -135,7 +138,7 @@ class U2Net_portrait():
 
         # normalization
         pred = 1.0 - d1[:,0,:,:]
-        pred = normPRED(pred)
+        pred = self.normPRED(pred)
 
         # convert torch tensor to numpy array
         pred = pred.squeeze()
@@ -158,10 +161,11 @@ class U2Net_portrait():
             net.cuda()
         net.eval()
 
-        # load each image
-        print(filepath)
+        logger.info(f'run {filepath}')
+
         img = cv2.imread(filepath)
         height, width = img.shape[0:2]
+        
         face = self.detect_single_face(face_cascade,img)
         im_face = self.crop_face(img, face)
         im_portrait = self.inference(net,im_face)

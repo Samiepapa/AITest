@@ -41,7 +41,7 @@ class Controller():
         os.makedirs(self._path_upload, exist_ok=True)
         file.save(os.path.join(self._path_upload, filename))
 
-        u2net = U2Net_portrait(path_model-self._path_model, path_output=self._path_output)
+        u2net = U2Net_portrait(path_model=self._path_model, path_output=self._path_output)
         return u2net.run(os.path.normpath(os.path.join(self._path_upload, filename)))
     
     def file_download(self, filename):
