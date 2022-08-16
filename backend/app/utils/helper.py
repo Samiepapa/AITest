@@ -6,7 +6,7 @@ import os
 import traceback
 
 def get_callstack():
-    lines = tracback.format_exc().strip().split('\n')
+    lines = traceback.format_exc().strip().split('\n')
     rl = [lines[-1]]
     lines = lines[1:-1]
     lines.reverse()
