@@ -1,3 +1,4 @@
+#-*- coding:utf-8 -*-
 __author__ = "yongil80.cho@samsung.com"
 __copyright__ = "Copyright 2022, Samsung Electronics"
 
@@ -19,7 +20,7 @@ logger = CustomLogger.__call__().logger
 config = config_by_name[(os.getenv('SERVER_MODE') or 'dev')]
 CONTROLLER = Controller()
 CONTROLLER.init(
-    path_database=config.PATH_DATABASE,
+    path_manifest=config.PATH_MANIFEST,
     path_upload=config.PATH_UPLOAD,
     path_output=config.PATH_OUTPUT,
     path_model=config.PATH_MODEL)

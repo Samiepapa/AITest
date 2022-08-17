@@ -11,6 +11,9 @@ class Config:
     PATH_OUTPUT = os.path.normpath(os.path.join(basedir, '../output'))
     PATH_UPLOAD = os.path.normpath(os.path.join(basedir, '../appdata/upload'))
     PATH_DATABASE = os.path.normpath(os.path.join(basedir, '../appdata/storage'))
+    SSL_CERTFILE = os.path.normpath(os.path.join('/etc/letsencrypt/live/be.aipowered.kro.kr/fullchain.pem'))
+    SSL_KEYFILE = os.path.normpath(os.path.join('/etc/letsencrypt/live/be.aipowered.kro.kr/privkey.pem'))
+    SSL_PASSWORD = 'aipowered'
 
 class DevelopmentConfig(Config):
     DEBUG = True
