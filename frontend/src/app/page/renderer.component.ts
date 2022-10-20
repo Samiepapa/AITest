@@ -32,7 +32,7 @@ import WebGL from 'three/examples/jsm/capabilities/WebGL.js';
 
     #cv_modifier {
       position: absolute;
-      top: 20px;
+      top: 60px;
       left: 20px;
       font-size: 11px;
       width: 200px;

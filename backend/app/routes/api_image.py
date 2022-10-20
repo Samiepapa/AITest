@@ -37,7 +37,8 @@ def api_download(filename):
         img_byte_arr = io.BytesIO()
         img.save(img_byte_arr, format='PNG')
         my_encoded_img = base64.encodebytes(img_byte_arr.getvalue()).decode('ascii')
-        return my_encoded_img
+	data = {'message': my_encoded_img, 'code': 'OK'}
+        return make_response(jsonify(data), 200, hdrs)
         #return send_file(filepath, mimetype='image/gif')
     except Exception as e:
         data = {'message': str(e), 'code': 'ERROR'}

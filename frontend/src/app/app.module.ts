@@ -6,16 +6,12 @@ import { AppComponent } from './app.component';
 
 import { ImageDragDirective } from './directive/image-drag.directive';
 
-import { HeaderComponent } from './component/header.component';
-import { FooterComponent } from './component/footer.component';
-import { BannerComponent } from './component/banner.component';
-import { SideMenuComponent } from './component/side-menu.component';
+import { NavbarComponent } from './component/navbar.component';
+import { SidebarComponent } from './component/sidebar.component';
 
 import { MainComponent } from './page/main.component';
-import { OnnxComponent } from './page/onnx.component';
+import { AnalyzerComponent } from './page/analyzer.component';
 import { RendererComponent } from './page/renderer.component';
-import { PortraitComponent } from './page/portrait.component';
-import { TemplateComponent } from './page/template.component';
 
 import { Renderer } from './service/renderer';
 
@@ -25,16 +21,12 @@ import { Renderer } from './service/renderer';
 
     ImageDragDirective,
 
-    HeaderComponent,
-    FooterComponent,
-    BannerComponent,
-    SideMenuComponent,
+    NavbarComponent,
+    SidebarComponent,
 
     MainComponent,
-    OnnxComponent,
+    AnalyzerComponent,
     RendererComponent,
-    PortraitComponent,
-    TemplateComponent
   ],
   imports: [
     BrowserModule,
