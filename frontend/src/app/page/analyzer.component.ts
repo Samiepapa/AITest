@@ -57,7 +57,7 @@ declare const $: any;
 
 export class AnalyzerComponent implements OnInit {
 
-  private acceptedImageTypes: { [key: string]: boolean } = {'image/png': true, 'image/jepg': true, 'image/gif': true};
+  private acceptedImageTypes: { [key: string]: boolean } = {'image/png': true, 'image/jpeg': true, 'image/gif': true};
   public imageDescription: string = '';
   public isLoading: boolean = false;
 
