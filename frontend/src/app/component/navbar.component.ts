@@ -8,7 +8,7 @@ declare const $: any;
     <div class="ui secondary menu">
       <a class="item disabled"></a>
       <a class="header item" routerLink="/"><i class="icon qq"></i><b>MMC S/W</b><font style='font-style: italic;'>&nbsp;develop</font></a>
-      <a class="icon item" (click)="toggle_sidebar()"><i class="icon bar"></i></a>
+      <a class="icon item" (click)="toggle_sidebar()"><i class="icon bars"></i></a>
       <div class="right menu">
         <a class="item disabled" routerLink="/setting"><i class="icon cog"></i></a>
         <a class="item" *ngIf="(isAuthenticated())" (click)="logout()"><i class="icon user"></i>{{ username() | lowercase }}</a>
