@@ -26,7 +26,7 @@ import { Renderer } from './service/renderer';
 
     MainComponent,
     AnalyzerComponent,
-    RendererComponent,
+    RendererComponent
   ],
   imports: [
     BrowserModule,
